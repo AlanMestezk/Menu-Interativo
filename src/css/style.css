@@ -1,0 +1,105 @@
+
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100 vh;
+    background-color: rgb(231, 116, 193);
+}
+
+.navigator{
+    margin-top: 45vh;
+    width: 400px;
+    height: 70px;
+    background-color: rgb(199, 11, 136);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+}
+
+.navigator ul
+{
+    display: flex;
+    width: 350px;
+}
+
+.navigator ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigator ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigator ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.6em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--light-gray);
+}
+
+.navigator ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+
+.navigator ul li a .text
+{
+    position: absolute;
+    color: var(--light-gray);
+    font-weight:bolder ;
+    font-size: 0.75em;
+    letter-spacing: 0.05s;
+    transition: 00.4s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigator ul li.active a .text
+{
+    opacity: 1;
+}
+
+.indicator
+{   
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: rgb(199, 11, 136);
+    border-radius: 50%;
+    border: 5px solid rgb(231, 116, 193);
+    transition: 0.5s;
+}
